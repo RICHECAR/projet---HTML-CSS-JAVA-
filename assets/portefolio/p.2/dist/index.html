@@ -138,5 +138,17 @@
   <button @click="addNewTrack">Ajouter musique</button>
 </div>
 
+  <div id="playlist">
+  <input type="text" v-model="newPlaylistName" placeholder="Nom de la playlist">
+  <button @click="createPlaylist">Créer Playlist</button>
+
+  <div v-for="(playlist, index) in playlists" :key="index">
+    <h3>{{ playlist.name }}</h3>
+    <ul>
+      <li v-for="(track, i) in playlist.tracks" :key="i">{{ track.name }} - {{ track.artist }}</li>
+    </ul>
+  </div>
+</div>
+
 </body>
 </html>
