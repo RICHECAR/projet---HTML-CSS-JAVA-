@@ -118,41 +118,6 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script><script  src="./script.js"></script>
 
 
-  <div id="playlist">
-  <input type="text" v-model="newPlaylistName" placeholder="Nom de la playlist">
-  <button @click="createPlaylist">Créer Playlist</button>
-
-  <div v-for="(playlist, index) in playlists" :key="index">
-    <h3>{{ playlist.name }}</h3>
-    <ul>
-      <li v-for="(track, i) in playlist.tracks" :key="i">{{ track.name }} - {{ track.artist }}</li>
-    </ul>
-  </div>
-</div>
-<!-- Ajout d'une section pour ajouter de nouvelles musiques -->
-<div id="addTrack">
-  <input type="text" v-model="newTrackName" placeholder="Nom de la musique">
-  <input type="text" v-model="newTrackArtist" placeholder="Artiste">
-  <input type="text" v-model="newTrackCover" placeholder="Lien de la pochette">
-  <input type="text" v-model="newTrackSource" placeholder="Lien de la musique">
-  <button @click="addNewTrack">Ajouter musique</button>
-</div>
-
-  <div id="playlist">
-  <input type="text" v-model="newPlaylistName" placeholder="Nom de la playlist">
-  <button @click="createPlaylist">Créer Playlist</button>
-
-  <div v-for="(playlist, index) in playlists" :key="index">
-    <h3>{{ playlist.name }}</h3>
-    <ul>
-      <li v-for="(track, i) in playlist.tracks" :key="i">{{ track.name }} - {{ track.artist }}</li>
-    </ul>
-  </div>
-</div>
-
-  <button @click="toggleLoop">Loop: {{ isLooping ? 'On' : 'Off' }}</button>
-<button @click="toggleShuffle">Shuffle: {{ isShuffling ? 'On' : 'Off' }}</button>
-
 
 </body>
 </html>
