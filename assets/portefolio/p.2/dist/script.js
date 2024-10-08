@@ -1,5 +1,3 @@
-
-
 new Vue({
   el: "#app",
   data() {
@@ -210,9 +208,4 @@ new Vue({
       document.head.appendChild(link)
     }
   }
-
- 
-
-
-
 });
