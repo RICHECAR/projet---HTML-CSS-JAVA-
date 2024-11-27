@@ -1,4 +1,0 @@
-# Live Cryptocurrency Watch
-
-
-
